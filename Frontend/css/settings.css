@@ -1,0 +1,132 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-Bold"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    min-width: 320px;
+    font-family: "OpenSans", sans-serif;
+    background-color:  #F5F5F5;
+    font-weight: 400;
+
+}
+
+.link-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1216px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.site-btn {
+    background-color: #9873FF;
+    color: white;
+}
+
+.site-modal {
+    position: fixed;
+    overflow-x: auto;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000065;
+    opacity: 0;
+}
+
+.site-modal__content {
+    max-width: 450px;
+    cursor: auto;
+    position: absolute;
+    padding: 25px 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    opacity: 0;
+}
+
+.site-tooltip {
+    position: absolute;
+    top: -41px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    padding: 7px 15px;
+    background-color: black;
+}
+
+.site-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateX(-50%);
+    clip-path: polygon(100% 0, 0 0, 51% 100%);
+    background-color: black;
+}

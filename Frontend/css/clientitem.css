@@ -1,0 +1,188 @@
+.clients__table {
+    width: 100%;
+    margin-bottom: 40px;
+    min-width: 1186px;
+}
+
+.clients__item {
+    display: flex;
+    padding: 18px;
+    border-bottom: 1px solid #C8C5D1;
+    background-color: white;
+}
+
+.client__id {
+    display: flex;
+    align-items: center;
+    width: 7%;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.clients__full-name {
+    width: calc(32% + 5px);
+    font-size: 14px;
+    color: black;
+}
+
+.clients__full-name span:not(:last-child) {
+    margin-right: 5px;
+}
+
+.clients__created {
+    width: calc(15%);
+}
+
+.clients__changed {
+    width: calc(15%);
+    padding-left: 5px;
+}
+
+.created__date,
+.changed__date {
+    margin-right: 7px;
+    font-size: 14px;
+    color: black;
+}
+
+.created__time,
+.changed__time {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.clients__contacts {
+    margin: -10px 2px -17px 0;
+    max-width: 120px;
+    min-width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.clients__actions {
+    display: flex;
+    align-items: center;
+}
+
+.clients__actions button {
+    display: inline-block;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: transparent;
+    padding-left: 20px;
+    color: black;
+}
+
+.clients__edit {
+    position: relative;
+    transition: color .1s ease-in-out;
+    margin-right: 32px;
+    background-image: url('../img/edit.svg');
+}
+
+.clients__delete {
+    position: relative;
+    transition: color .1s ease-in-out;
+    margin-right: 32px;
+    background-image: url('../img/cancel.svg');
+}
+
+.clients__edit:hover {
+    transition: color .1s ease-in-out;
+    color: #9873FF;
+}
+
+.clients__delete:hover {
+    transition: color .1s ease-in-out;
+    color: red;
+}
+
+.contacts__link {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 7px;
+}
+
+.contacts__link g,
+.contacts__link path {
+    transition: opacity .1s ease-in-out;
+}
+
+.contacts__link:hover g,
+.contacts__link:hover path {
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+}
+
+.contacts__link:not(:last-child) {
+    margin-right: 7px;
+}
+
+.action-wait {
+    background-image: none;
+}
+
+.actions__spinner {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spinner .1s ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.clients__edit .actions__spinner svg {
+    stroke: #9873FF;
+    fill: none;
+}
+
+.clients__delete .actions__spinner svg {
+    stroke: red;
+    fill: none;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.contacts__link.hidden {
+    display: none;
+}
+
+.contacts__link.hidden.active {
+    display: block;
+}
+
+.contacts__btn-close {
+    width: 16px;
+    height: 16px;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
+    color: black;
+    border: 1px solid #9873FF;
+    border-radius: 50%;
+    padding: 1px;
+    cursor: pointer;
+}
+
+
+
+.contacts__link.active {
+    display: none;
+}
+
+.contacts__link.contacts__link__active {
+    display: block;
+}

@@ -1,0 +1,21 @@
+@media (max-width: 1024px) {
+    .display-info__item--create {
+        padding-left: 93px;
+        padding-right: 2px;
+    }
+    .display-info__item--create::before {
+        right: 25px;
+        top: 13px;
+    }
+    .display-info__item--change {
+        padding-right: 1px;
+        padding-left: 53px;
+    }
+    .display-info__item--change::before {
+        right: 0;
+        top: 12px;
+    }
+    .display-info__item--contacts {
+        padding-left: 62px;
+    }
+}
